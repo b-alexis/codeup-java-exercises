@@ -3,13 +3,13 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
-        //Counting backwards from 100 to -10 by 5
-        int i = 100;
+
+        long i = 2;
         do {
             System.out.println(i);
-            i-=5;
-        }while (i >= -10);
-
+            i*=i;
+        }while (i <= 1000000);
+        // in this case, we should use long, since the number is much bigger than you would use with just an integer. Using an integer would break or continue the loop, IT SHOULD NOT BE USED. just use long.
 
     }
 }
