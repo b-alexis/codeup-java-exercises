@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int i =0;
+
+        //Counting backwards from 100 to -10 by 5
+        int i = 100;
         do {
-            System.out.println(i*2); //i
-            i++; //i+=2
-        }while (i <= 50); //100
+            System.out.println(i);
+            i-=5;
+        }while (i >= -10);
 
 
     }
