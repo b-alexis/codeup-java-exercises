@@ -10,7 +10,8 @@ public class MethodsExercise {
         System.out.println(getInteger(1, 10));
         System.out.println("Enter an integer between 1 and 10");
         getFactorial(1, 10);
-
+        System.out.println("Enter the number of sides for our dice pls :)");
+        rollDice(1,  );
     }
 
     public static int addition(int x, int y) {
@@ -33,7 +34,8 @@ public class MethodsExercise {
     public static boolean getInteger(int i, int i1) {
         Scanner scan = new Scanner(System.in);
         int userInput = scan.nextInt();
-        if (userInput <= 10 && userInput >= 1) {
+        //alt solution int input = Integer.parseInt(scan.nextLine());
+        if (userInput <= i && userInput >= i1) {
             return true;
 
         } else {
@@ -51,7 +53,25 @@ public class MethodsExercise {
         for (int i = 1; i <= input; i++) {
             fact = fact * i;
             System.out.println(i + "!" + input + "=" + fact);
+           // (i + "! =" + i + "=" + (fact))
         }
         return fact;
     }
+
+    public static int rollDice(int sides, Scanner input) {
+        while (true){
+
+
+//        Scanner input = new Scanner(System.in);
+//        int sides =scan.nextInt();
+//        double die1 = Math.floor(Math.random()*sides);
+//        System.out.print(die1);
+
+
+        }
+
+    }
+
+
+
 }
