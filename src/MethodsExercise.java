@@ -11,7 +11,7 @@ public class MethodsExercise {
         System.out.println("Enter an integer between 1 and 10");
         getFactorial(1, 10);
         System.out.println("Enter the number of sides for our dice pls :)");
-        rollDice(1,  );
+
     }
 
     public static int addition(int x, int y) {
