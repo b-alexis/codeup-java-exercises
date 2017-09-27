@@ -15,7 +15,7 @@ public class ServerNameGenerator {
     }
     private static Random rand = new Random();
 public static String getRand(String[] wordArray){
-    return wordArray
+    return wordArray [rand.nextInt(wordArray.length)];
 }
 
 }
