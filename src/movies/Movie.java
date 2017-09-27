@@ -1,10 +1,12 @@
 package movies;
 
+//constructors/ variable assigning
 public class Movie {
     private String name;
 
     private String category;
 
+    //getters
     public String getCategory() {
         return category;
     }
