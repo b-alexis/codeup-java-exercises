@@ -2,9 +2,12 @@ package util;
 
 import java.util.Scanner;
 
-public class Input{
+public class Input {
     private Scanner scanner;
 
+    public Input(){
+        this.scanner = new Scanner(System.in);
+    }
 
     public String getString() {
         String userString = scanner.nextLine();
@@ -19,13 +22,17 @@ public class Input{
     }
 
     public int getInt() {
-        if (this.scanner.hasNextInt()) {
-            return this.scanner.nextInt();
-        } else {
-            System.out.println("invalid input");
-            return getInt();
-        }
+//        if (this.scanner.hasNextInt()) {
+//            return this.scanner.nextInt();
+//        } else {
+//            System.out.println("invalid input");
+//            return getInt();
+//        }
+        int Input = scanner.nextInt();
+        scanner.nextLine();
+        return Input;
     }
+
     // switch out int for double for the object methods should need to receive doubles
     public int getInt(int min, int max) {
         int userInput = getInt();
@@ -33,6 +40,7 @@ public class Input{
             System.out.println(userInput + "is not between" + min + "and + max");
             return getInt(min, max);
         }
+        scanner.nextLine();
         return userInput;
     }
 }
