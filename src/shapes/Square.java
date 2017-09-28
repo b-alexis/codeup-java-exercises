@@ -5,16 +5,19 @@ public class Square extends Rectangle {
 
     @Override
     public int getArea() {
-        return super.getArea();
+        return this.getLength() * this.getWidth();
 
     }
 
-    public Square (int side) {
+    @Override
+    public int getPerimeter() {
+        return this.getLength() * 4;
+    }
+
+    public Square(int side) {
         super(side, side);
 
     }
-
-
 
 
 }
