@@ -1,6 +1,7 @@
 package shapes;
 
 public interface Measurable {
+
     double getPerimeter();
 
     double getArea();
@@ -8,9 +9,9 @@ public interface Measurable {
     void setWidth(double shapeWidth);
 
 
-    void setLength(double shapeLength);
-
-    void setSide(double shapeSide);
+//    void setLength(double shapeLength);
+//
+//    void setSide(double shapeSide);
 
 
 }

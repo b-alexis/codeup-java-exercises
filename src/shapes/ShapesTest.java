@@ -1,21 +1,13 @@
 package shapes;
 
 public class ShapesTest {
-    public static void main(String[] args){
-     Rectangle box1 = new Rectangle();
-     Rectangle box2 = new Square();
-     System.out.println(box1.getArea());
+    public static void main(String[] args) {
+        Measurable myShape = new Square(5);
+        myShape = new Rectangle(5,4);
 
-     System.out.println(box1.getPerimeter());
+        System.out.println("area:" + myShape.getArea());
+        System.out.println("perimeter" + myShape.getPerimeter());
 
-     System.out.println(box2.getArea());
-     System.out.println(box2.getPerimeter());
-
-     //Another way to save lines
-       // Rectangle [] recs = {rec, sqr};
-        // for(Rectangle r : recs){
-        //System.out.println(r.getArea());
-        //System.out.println(r.GetPerimeter());}
     }
 }
 
