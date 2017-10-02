@@ -19,6 +19,7 @@ public class Input {
         System.out.println("Do you want to continue?");
         String userInput = this.scanner.nextLine();
         return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
+
     }
 
     public int getInt() {
