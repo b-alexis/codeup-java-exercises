@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MethodsExercise {
+public class MethodsExercises {
     public static void main(String[] args) {
         System.out.println(addition(7, 3));
         System.out.println(subtraction(7, 3));
