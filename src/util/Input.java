@@ -1,11 +1,13 @@
 package util;
 
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+
 import java.util.Scanner;
 
 public class Input {
     private Scanner scanner;
 
-    public Input(){
+    public Input() {
         this.scanner = new Scanner(System.in);
     }
 
@@ -22,18 +24,24 @@ public class Input {
     }
 
     public int getInt() {
-//        if (this.scanner.hasNextInt()) {
-//            return this.scanner.nextInt();
-//        } else {
-//            System.out.println("invalid input");
-//            return getInt();
-//        }
-        int Input = scanner.nextInt();
-        scanner.nextLine();
-        return Input;
-    }
+      try{
+          String userInput = scanner.nextLine();
 
-    // switch out int for double for the object methods should need to receive doubles
+                  return Integer.valueOf(userInput);
+      } catch(NumberFormatException nfe){
+          System.out.println("invalid");
+      }
+
+            return getInt();
+//        }
+//        int Input = scanner.nextInt();
+//        scanner.nextLine();
+//        return Input;
+
+        }
+
+        // switch out int for double for the object methods should need to receive doubles
+
     public int getInt(int min, int max) {
         int userInput = getInt();
         if (userInput < min || userInput > max) {
@@ -41,6 +49,25 @@ public class Input {
             return getInt(min, max);
         }
         scanner.nextLine();
+        return userInput;
+    }
+
+    public double getDouble() {
+       try{
+           String userInput = scanner.nextLine();
+           return Double.valueOf(userInput);
+       }catch (NumberFormatException nfe){
+           System.out.println("Not a double");
+       }
+        return getDouble();
+    }
+
+    public double getDouble(double min, double max) {
+        double userInput = getDouble();
+        if (userInput < min || userInput > max) {
+            System.out.println(userInput + "is not between" + min + "and" + max);
+            return getDouble(min, max);
+        }
         return userInput;
     }
 }
